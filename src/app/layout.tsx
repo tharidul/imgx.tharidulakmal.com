@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     canonical: "https://imgx.tharidulakmal.com",
   },
   verification: {
-    google: "google-site-verification-token",
+    google: "mwpWbq-DT64GtmKZvZlYEA_8CSt4PUElr-ZvgvIHQBk",
   },
 };
 
