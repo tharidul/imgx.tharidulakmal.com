@@ -33,7 +33,8 @@ export default function EmptyState({
     <div
       role="button"
       tabIndex={0}
-      className={`flex min-h-[400px] cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d1117] ${
+      className={`flex min-h-[400px] cursor-pointer flex-col items-center text-center
+         justify-center rounded-lg border-2 border-dashed transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d1117] ${
         isDragging 
           ? 'border-violet-500 bg-violet-500/10 scale-[1.02] shadow-lg shadow-violet-500/10' 
           : 'border-[#30363d] hover:border-zinc-600 hover:bg-[#161b22]/50'
@@ -43,7 +44,7 @@ export default function EmptyState({
       onDragLeave={onDragLeave}
       onClick={() => fileInputRef.current?.click()}
       onKeyDown={handleKeyDown}
-      aria-label="Upload image"
+      aria-label="Upload image for conversion. Supports PNG, JPG, WebP, SVG, BMP, TIFF, GIF up to 10MB."
     >
       <input
         ref={fileInputRef}
@@ -52,6 +53,7 @@ export default function EmptyState({
         onChange={handleInputChange}
         className="hidden"
         aria-hidden="true"
+        aria-label="Select image file to convert"
       />
       <svg
         className={`mb-4 h-12 w-12 transition-all duration-200 ${isDragging ? 'scale-110 text-violet-400' : 'text-[#8b949e]'}`}
@@ -71,7 +73,7 @@ export default function EmptyState({
         {isDragging ? 'Drop image here' : 'Drop an image or click to upload'}
       </p>
       <p className="text-sm text-[#8b949e]">
-        PNG, JPG, WEBP, SVG, BMP, TIFF, GIF (max 10MB)
+        <span className="font-medium">Supported formats:</span> PNG, JPG, WEBP, SVG, BMP, TIFF, GIF (max 10MB)
       </p>
     </div>
   );

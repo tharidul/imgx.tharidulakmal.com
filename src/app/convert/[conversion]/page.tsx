@@ -6,6 +6,7 @@ import ImageConverter from '@/components/converter/ImageConverter';
 import Link from 'next/link';
 import { parseConversionRoute, formatConversionTitle, getConversionDescription, getConversionFeatures, getConversionExplanation, getFAQItems } from '@/lib/image/route-utils';
 import { ImageFormat } from '@/types/image';
+import BreadcrumbJsonLd from './BreadcrumbJsonLd';
 
 interface PageProps {
   params: Promise<{ conversion: string }>;
@@ -89,6 +90,7 @@ export default async function ConversionPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#0d1117]">
+      <BreadcrumbJsonLd conversion={conversion} source={route.source} target={route.target} />
       <Header />
       <main className="flex-1 px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">

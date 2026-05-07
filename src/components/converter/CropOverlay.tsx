@@ -4,7 +4,7 @@ import { useRef, useEffect } from 'react';
 import ReactCrop, { type Crop, type PixelCrop, type PercentCrop, centerCrop, makeAspectCrop } from 'react-image-crop';
 import 'react-image-crop/dist/ReactCrop.css';
 
-export type AspectRatioPreset = 'free' | '1:1' | '4:5' | '16:9' | '9:16' | '3:2';
+export type AspectRatioPreset = 'free' | '1:1' | '4:5' | '16:9' | '9:16' | '3:2' | '5:4' | '4:3' | '2:3' | '2:1' | '1:2' | '5:3';
 
 interface CropOverlayProps {
   imageSrc: string;

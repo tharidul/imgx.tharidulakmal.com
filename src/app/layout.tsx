@@ -16,45 +16,52 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://imgx.tharidulakmal.com"),
   title: {
-    default: "IMG-X — Free Online Image Converter",
+    default: "IMG-X — Private Browser-Based Image Converter",
     template: "%s | IMG-X",
   },
   description:
-    "Convert images instantly to PNG, JPG, WEBP, ICO and more. Fast, private, and 100% browser-based. Your files never leave your device.",
+    "Convert images to PNG, JPG, WebP, ICO and more. No uploads. No cloud processing. 100% local browser-based conversion. Your files never leave your device.",
   keywords: [
     "image converter",
     "convert image online",
     "png to jpg",
     "jpg to webp",
+    "png to webp",
+    "jpg to png",
+    "webp to png",
     "free image converter",
     "browser image converter",
+    "private image converter",
+    "local image conversion",
     "imgx",
   ],
-  authors: [{ name: "Tharidulakmal" }],
-  creator: "Tharidulakmal",
+  authors: [{ name: "Tharindu Lakmal", url: "https://tharidulakmal.com" }],
+  creator: "Tharindu Lakmal",
+  publisher: "Tharindu Lakmal",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://imgx.tharidulakmal.com",
     siteName: "IMG-X",
-    title: "IMG-X — Free Online Image Converter",
+    title: "IMG-X — Private Browser-Based Image Converter",
     description:
-      "Convert images instantly to PNG, JPG, WEBP, ICO and more. Fast, private, 100% in your browser.",
+      "Convert images to PNG, JPG, WebP, ICO and more. No uploads. No cloud processing. 100% local browser-based conversion.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "IMG-X — Free Online Image Converter",
+        alt: "IMG-X — Private Browser-Based Image Converter",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "IMG-X — Free Online Image Converter",
+    title: "IMG-X — Private Browser-Based Image Converter",
     description:
-      "Convert images instantly to PNG, JPG, WEBP, ICO and more. Fast, private, 100% in your browser.",
+      "Convert images to PNG, JPG, WebP, ICO and more. No uploads. No cloud processing. 100% local browser-based conversion.",
     images: ["/og-image.png"],
+    creator: "@tharidul",
   },
   robots: {
     index: true,
@@ -64,10 +71,14 @@ export const metadata: Metadata = {
       follow: true,
       "max-image-preview": "large",
       "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
   alternates: {
     canonical: "https://imgx.tharidulakmal.com",
+  },
+  verification: {
+    google: "google-site-verification-token",
   },
 };
 

@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
 import type { Crop, PercentCrop } from 'react-image-crop';
 
-export type AspectRatioPreset = 'free' | '1:1' | '4:5' | '16:9' | '9:16' | '3:2';
+export type AspectRatioPreset = 'free' | '1:1' | '4:5' | '16:9' | '9:16' | '3:2' | '5:4' | '4:3' | '2:3' | '2:1' | '1:2' | '5:3';
 
 const ASPECT_RATIOS: Record<AspectRatioPreset, number | undefined> = {
   free: undefined,
@@ -10,6 +10,12 @@ const ASPECT_RATIOS: Record<AspectRatioPreset, number | undefined> = {
   '16:9': 16 / 9,
   '9:16': 9 / 16,
   '3:2': 3 / 2,
+  '5:4': 5 / 4,
+  '4:3': 4 / 3,
+  '2:3': 2 / 3,
+  '2:1': 2 / 1,
+  '1:2': 1 / 2,
+  '5:3': 5 / 3,
 };
 
 export interface CropState {

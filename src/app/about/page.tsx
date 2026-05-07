@@ -3,103 +3,156 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'About IMG-X - Free Online Image Converter',
-  description: 'Learn about IMG-X, a free, browser-based image converter that prioritizes privacy and speed. No uploads, no signup, 100% client-side processing.',
+  title: 'About Tharidu Lakmal Rupasingha | Full Stack Developer',
+  description: 'Learn about Tharidu Lakmal Rupasingha, a Full Stack Developer specializing in browser-based tools, microservices, modern web applications, and privacy-first software engineering.',
   alternates: {
     canonical: 'https://imgx.tharidulakmal.com/about',
   },
+  openGraph: {
+    type: 'profile',
+    url: 'https://imgx.tharidulakmal.com/about',
+    siteName: 'IMG-X',
+    title: 'About Tharidu Lakmal Rupasingha | Full Stack Developer',
+    description: 'Full Stack Developer specializing in browser-based tools, microservices, modern web applications, and privacy-first software engineering.',
+  },
 };
+
+function PersonSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Tharidu Lakmal Rupasingha',
+    url: 'https://imgx.tharidulakmal.com/about',
+    jobTitle: 'Full Stack Developer',
+    image: 'https://imgx.tharidulakmal.com/images/me.png',
+    sameAs: [
+      'https://github.com/tharidul',
+      'https://www.linkedin.com/in/tharidul',
+      'https://www.youtube.com/@tharindulakmal5593',
+      'https://tharidulakmal.com',
+    ],
+    knowsAbout: [
+      'Java',
+      'Spring Boot',
+      'Node.js',
+      'React',
+      'Next.js',
+      'PostgreSQL',
+      'MongoDB',
+      'Microservices',
+      'Privacy-first software',
+    ],
+    knowsLanguage: ['English'],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#0d1117]">
+      <PersonSchema />
       <Header />
       <main className="flex-1 px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
-          <h1 className="mb-8 text-center text-4xl font-bold text-[#e6edf3] sm:text-5xl">
-            About IMG-X
+          <h1 className="mb-4 text-center text-4xl font-bold text-[#e6edf3] sm:text-5xl">
+            Tharidu Lakmal Rupasingha
           </h1>
-          
-          <div className="space-y-8">
+          <p className="mb-8 text-center text-lg text-[#8b949e]">
+            Full Stack Developer
+          </p>
+
+          <div className="space-y-6">
             <section className="rounded-lg border border-[#30363d] bg-[#161b22] p-6">
-              <h2 className="mb-4 text-2xl font-semibold text-[#e6edf3]">What is IMG-X?</h2>
+              <h2 className="mb-4 text-xl font-semibold text-[#e6edf3]">About</h2>
               <p className="text-[#8b949e] leading-relaxed">
-                IMG-X is a free, browser-based image converter that lets you convert images between different formats without ever uploading your files to a server. All processing happens locally in your browser, ensuring complete privacy and instant results.
+                Full Stack Developer building browser-based tools, modern web applications, and privacy-first software. Specializes in microservices architecture and cloud systems. Focuses on creating utility tools that prioritize user privacy and local processing.
               </p>
             </section>
 
             <section className="rounded-lg border border-[#30363d] bg-[#161b22] p-6">
-              <h2 className="mb-4 text-2xl font-semibold text-[#e6edf3]">Privacy First</h2>
-              <p className="text-[#8b949e] leading-relaxed">
-                Unlike other image converters, IMG-X never sends your files to any server. All image processing is done entirely in your browser using the HTML5 Canvas API. Your images never leave your device, making IMG-X the most private way to convert images online.
-              </p>
+              <h2 className="mb-4 text-xl font-semibold text-[#e6edf3]">Technical Expertise</h2>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <h3 className="mb-2 text-sm font-medium text-[#e6edf3]">Frontend</h3>
+                  <p className="text-xs text-[#8b949e]">React, Next.js, TypeScript, TailwindCSS</p>
+                </div>
+                <div>
+                  <h3 className="mb-2 text-sm font-medium text-[#e6edf3]">Backend</h3>
+                  <p className="text-xs text-[#8b949e]">Java, Spring Boot, Node.js, Express</p>
+                </div>
+                <div>
+                  <h3 className="mb-2 text-sm font-medium text-[#e6edf3]">Databases</h3>
+                  <p className="text-xs text-[#8b949e]">PostgreSQL, MongoDB, Redis</p>
+                </div>
+                <div>
+                  <h3 className="mb-2 text-sm font-medium text-[#e6edf3]">Cloud & DevOps</h3>
+                  <p className="text-xs text-[#8b949e]">Docker, Kubernetes, AWS, CI/CD</p>
+                </div>
+              </div>
             </section>
 
             <section className="rounded-lg border border-[#30363d] bg-[#161b22] p-6">
-              <h2 className="mb-4 text-2xl font-semibold text-[#e6edf3]">Supported Formats</h2>
-              <ul className="grid gap-2 text-[#8b949e] sm:grid-cols-2">
-                <li className="flex items-center gap-2">
-                  <span className="text-violet-400">→</span> PNG (Portable Network Graphics)
+              <h2 className="mb-4 text-xl font-semibold text-[#e6edf3]">Projects</h2>
+              <ul className="space-y-3 text-sm text-[#8b949e]">
+                <li>
+                  <a href="/" className="font-medium text-[#e6edf3] hover:text-violet-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 rounded">
+                    IMG-X
+                  </a>
+                  <span className="block text-xs mt-1">Private browser-based image converter. No uploads. 100% local processing.</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-violet-400">→</span> JPG/JPEG (Joint Photographic Experts Group)
+                <li>
+                  <span className="font-medium text-[#e6edf3]">Microservices Systems</span>
+                  <span className="block text-xs mt-1">Distributed architecture implementations with Spring Boot and Node.js.</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-violet-400">→</span> WEBP (Web Picture Format)
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-violet-400">→</span> ICO (Icon Format)
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-violet-400">→</span> SVG (Scalable Vector Graphics)
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-violet-400">→</span> BMP (Bitmap)
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-violet-400">→</span> TIFF (Tagged Image File Format)
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-violet-400">→</span> GIF (Graphics Interchange Format)
+                <li>
+                  <span className="font-medium text-[#e6edf3]">SaaS Platforms</span>
+                  <span className="block text-xs mt-1">Full-stack web applications with PostgreSQL and MongoDB.</span>
                 </li>
               </ul>
             </section>
 
             <section className="rounded-lg border border-[#30363d] bg-[#161b22] p-6">
-              <h2 className="mb-4 text-2xl font-semibold text-[#e6edf3]">Features</h2>
-              <ul className="space-y-2 text-[#8b949e]">
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span>100% free with no signup required</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span>No file uploads - everything stays on your device</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span>Instant conversion with no waiting</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span>Adjust image dimensions with aspect ratio lock</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span>Control quality for lossy formats (JPG, WEBP)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span>Works on all modern browsers</span>
-                </li>
-              </ul>
-            </section>
-
-            <section className="rounded-lg border border-[#30363d] bg-[#161b22] p-6">
-              <h2 className="mb-4 text-2xl font-semibold text-[#e6edf3]">Open Source</h2>
-              <p className="text-[#8b949e] leading-relaxed">
-                IMG-X is built with modern web technologies including Next.js, React, and the HTML5 Canvas API. The code is open source and available on GitHub for anyone to inspect, fork, or contribute to.
-              </p>
+              <h2 className="mb-4 text-xl font-semibold text-[#e6edf3]">Connect</h2>
+              <nav className="flex flex-wrap gap-4 text-sm" aria-label="Social links">
+                <a
+                  href="https://github.com/tharidul"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#8b949e] hover:text-[#e6edf3] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 rounded"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/tharidul"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#8b949e] hover:text-[#e6edf3] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 rounded"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href="https://www.youtube.com/@tharindulakmal5593"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#8b949e] hover:text-[#e6edf3] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 rounded"
+                >
+                  YouTube
+                </a>
+                <a
+                  href="https://tharidulakmal.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#8b949e] hover:text-[#e6edf3] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 rounded"
+                >
+                  tharidulakmal.com
+                </a>
+              </nav>
             </section>
           </div>
         </div>
